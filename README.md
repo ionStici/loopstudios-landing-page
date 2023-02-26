@@ -2,30 +2,13 @@
 
 This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw).
 
-<!-- - White: hsl(0, 0%, 100%)
-- Black: hsl(0, 0%, 0%)
-- Dark Gray: hsl(0, 0%, 55%)
-- Very Dark Gray: hsl(0, 0%, 41%)
-
-- Font size: 15px
-
-- Family: [Alata](https://fonts.google.com/specimen/Alata)
-- Weight: 400
-
-- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
-- Weight: 300
+<!--
 
 - [Font Awesome](https://fontawesome.com)
 - [IcoMoon](https://icomoon.io)
 - [Ionicons](https://ionicons.com) -->
 
-<!-- About
-Careers
-Events
-Products
-Support
-
-Immersive experiences that deliver
+<!--
 
 The leader in interactive VR
 
