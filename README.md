@@ -10,19 +10,6 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 <!--
 
-Our creations
-
-See all
-
-Deep earth
-Night arcade
-Soccer team VR
-The grid
-From up above VR
-Pocket borealis
-The curiosity
-Make it fisheye
-
 About
 Careers
 Events
