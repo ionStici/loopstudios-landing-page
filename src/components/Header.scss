@@ -5,6 +5,7 @@
     background-size: cover;
     background-position: center;
     height: 650px;
+    margin-bottom: 96px;
 
     @media only screen and (min-width: 768px) {
         padding-top: 64px;
@@ -16,6 +17,8 @@
                 rgba(0, 0, 0, 0.25)
             ),
             url(./../images/desktop//image-hero.jpg);
+
+        margin-bottom: 160px;
     }
 
     &__logo {
