@@ -1,53 +1,73 @@
-import React from "react";
+import React, { useRef } from "react";
 import logo from "./../images/logo.svg";
 import iconClose from "./../images/icon-close.svg";
 import iconOpen from "./../images/icon-hamburger.svg";
-import "./Header.css";
+import "./Header.scss";
 
-export class Header extends React.Component {
-  constructor(props) {
-    super(props);
+export const Header = function () {
+    const header = useRef(null);
+    const menuIcon = useRef(null);
 
-    this.header = React.createRef();
-    this.ul = React.createRef();
-  }
+    const toggleNav = function () {
+        const body = document.querySelector("body");
 
-  componentDidMount() {
-    console.log(this.header.current);
-  }
+        if (!header.current.classList.contains("open")) {
+            header.current.classList.add("open");
+            menuIcon.current.setAttribute("src", iconClose);
+            body.style.overflow = "hidden";
+        } else if (header.current.classList.contains("open")) {
+            header.current.classList.remove("open");
+            menuIcon.current.setAttribute("src", iconOpen);
+            body.style.overflow = "revert";
+        }
+    };
 
-  render() {
     return (
-      <header ref={this.header} className="header open">
-        <nav className="nav">
-          <img src={logo} alt="Logo" />
-          <img
-            className="navBtn"
-            src={setTimeout(this.checkIfNavOpen, 1000)}
-            alt=""
-          />
+        <header ref={header} className="header close">
+            <nav className="header__nav">
+                <img className="header__logo" src={logo} alt="Logo" />
 
-          <ul ref={this.ul} className="ul">
-            <li>
-              <a href=".">About</a>
-            </li>
-            <li>
-              <a href=".">Careers</a>
-            </li>
-            <li>
-              <a href=".">Events</a>
-            </li>
-            <li>
-              <a href=".">Products</a>
-            </li>
-            <li>
-              <a href=".">Support</a>
-            </li>
-          </ul>
-        </nav>
+                <div className="header__icon-btn" onClick={toggleNav}>
+                    <img
+                        className="header__icon-nav"
+                        ref={menuIcon}
+                        src={iconOpen}
+                        alt=""
+                    />
+                </div>
 
-        <h1 className="h1">Immersive experiences that deliver</h1>
-      </header>
+                <ul className="header__ul">
+                    <li className="header__li">
+                        <a className="header__link" href=".">
+                            About
+                        </a>
+                    </li>
+                    <li className="header__li">
+                        <a className="header__link" href=".">
+                            Careers
+                        </a>
+                    </li>
+                    <li className="header__li">
+                        <a className="header__link" href=".">
+                            Events
+                        </a>
+                    </li>
+                    <li className="header__li">
+                        <a className="header__link" href=".">
+                            Products
+                        </a>
+                    </li>
+                    <li className="header__li">
+                        <a className="header__link" href=".">
+                            Support
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div className="header__h1-wrapper">
+                <h1 className="h1">Immersive experiences that deliver</h1>
+            </div>
+        </header>
     );
-  }
-}
+};
