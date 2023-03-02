@@ -1,0 +1,117 @@
+.footer {
+    background-color: var(--color-black);
+}
+
+.footerWrapper {
+    text-align: center;
+    padding: 56px 0;
+
+    @media only screen and (min-width: 768px) {
+        max-width: 1190px;
+        margin: 0 auto;
+        padding: 44px 40px 43px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+// .topBox {
+// }
+
+// .bottomBox {
+// }
+
+.logo {
+    width: 144px;
+    margin-bottom: 32px;
+
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 24px;
+    }
+}
+
+.ul_links {
+    list-style: none;
+    margin-bottom: 48px;
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 0;
+                margin-right: 32px;
+            }
+        }
+
+        &:hover .link::after {
+            background-color: var(--color-white);
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 0;
+        display: flex;
+    }
+}
+
+.link,
+.link:link,
+.link:visited {
+    font-family: var(--font-alata);
+    color: var(--color-white);
+    text-decoration: none;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -8px;
+
+        width: 24px;
+        height: 2px;
+        background-color: transparent;
+        transition: background-color 0.2s ease-in;
+    }
+}
+
+.ul_icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 24px;
+        justify-content: flex-end;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    img {
+        cursor: pointer;
+    }
+}
+
+.copyright {
+    font-family: var(--font-alata);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--color-white);
+    opacity: 0.5;
+}
